@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+class Solution {
+
+    static int solveMeSecond(int a, int b) {
+        return a+b;
+    }
+
+   public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+
+		int N = in.nextInt();
+		if(N<1001&& N>0){
+		int[] arr = new int[N];
+		int[] bo = new int[N];
+		int[] br = new int[N];
+		for (int y = 0; y < N; y++) {
+			for (int i = 0; i < N; i++) {
+				for (int k = 0; k < N; k++) {
+					arr[i] = in.nextInt();
+					br[k] = in.nextInt();
+					if((arr[i]<1001&&arr[i]>0)&&(br[k]<1001&&br[k]>0))
+					{bo[y] = solveMeSecond(arr[i], br[k]);}
+					
+					break;
+				}break;
+			}
+		}
+		
+for(int z =0;z<N;z++){
+	System.out.println(bo[z]);
+}
+	
+		}}}
